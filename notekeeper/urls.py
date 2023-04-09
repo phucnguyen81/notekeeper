@@ -29,5 +29,6 @@ urlpatterns = [
     path('accounts/change_password/', views.change_password, name='change_password'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('summernote/', include('django_summernote.urls')),
+    path('api/', include('api.urls')),
     path('', include('notes.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

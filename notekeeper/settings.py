@@ -39,10 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'rest_framework',
     'crispy_forms',
     'taggit',
     'accounts',
     'notes',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +139,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 SUMMERNOTE_THEME = 'bs4'
 
 TIME_ZONE =  'Asia/Kolkata'
+
+
+### REST FRAMEWORK CONFIGURATION ###
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}

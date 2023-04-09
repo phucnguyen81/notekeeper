@@ -1,0 +1,2 @@
+httpie
+-r ./requirements.txt
